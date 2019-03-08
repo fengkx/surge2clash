@@ -1,3 +1,9 @@
+#example
+example/
+
+#webstorm
+.idea
+
 # Logs
 logs
 *.log

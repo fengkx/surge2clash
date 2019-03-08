@@ -1,0 +1,42 @@
+{
+  "name": "surge2clash",
+  "version": "0.0.1",
+  "description": "convert surge conf to clash",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengkx/surge2clash.git"
+  },
+  "keywords": [
+    "surge",
+    "clash",
+    "config"
+  ],
+  "author": "fengkx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengkx/surge2clash/issues"
+  },
+  "homepage": "https://github.com/fengkx/surge2clash#readme",
+  "dependencies": {
+    "@eggjs/router": "^2.0.0",
+    "got": "^9.6.0",
+    "ini": "^1.3.5",
+    "js-yaml": "^3.12.2",
+    "koa": "^2.7.0",
+    "koa-logger": "^3.2.0",
+    "koa-onerror": "^4.1.0"
+  },
+  "xo": {
+    "space": true
+  },
+  "devDependencies": {
+    "xo": "^0.24.0"
+  }
+}
