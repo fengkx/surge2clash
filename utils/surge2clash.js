@@ -13,19 +13,22 @@ const clashConf = {
   secret: ''
 
 };
-const dns = {
-  // Enable: ctx.query.dns ? true : false,
-  listen: '0.0.0.0:53',
-  fallback: '8.8.8.8'
-};
 
 // eslint-disable-next-line complexity
 function surge2Clash(surgeConfText, query) {
   const surgeConf = ini.parse(surgeConfText);
 
+  const dns = {
+    enable: !!query.dns,
+    listen: '0.0.0.0:53',
+    fallback: '8.8.8.8'
+  };
+
   dns.nameserver = surgeConf.General['dns-server'].split(/,\s+/).filter(i => i.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/) || i.match(/^\w+:\/\//));
   dns.ipv6 = surgeConf.General.ipv6 || false;
-
+  if(!query.win) {
+    clashConf.dns = dns;
+  }
   const proxys = [];
 
   for (const name of Object.keys(surgeConf.Proxy)) {
