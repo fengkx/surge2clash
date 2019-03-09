@@ -11,6 +11,9 @@ app.use(logger());
 
 app.use(router.routes());
 app.use(router.allowedMethods());
+const port = process.env.PORT || 3000;
 
-http.createServer(app.callback()).listen(3000);
+http.createServer(app.callback()).listen(port, function () {
+    console.log('Listening  on port ' + port)
+});
 

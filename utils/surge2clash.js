@@ -7,7 +7,7 @@ const jsYaml = require('js-yaml');
 const clashConf = {
   port: 7890,
   'socks-port': 1080,
-  // 'redir-port':7892,
+  'redir-port':7892,
   'allow-lan': true,
   mode: 'Rule',
   'log-level': 'info',
