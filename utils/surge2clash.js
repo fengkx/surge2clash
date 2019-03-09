@@ -2,8 +2,6 @@
 const ini = require('ini');
 const jsYaml = require('js-yaml');
 
-// Const surgeConfText = fs.readFileSync(path.join(__dirname, '../example/t'), 'utf8');
-
 const clashConf = {
   port: 7890,
   'socks-port': 1080,
@@ -171,7 +169,6 @@ function surge2Clash(surgeConfText, query) {
   }
 
   const ret = Object.assign(clashConf, query);
-  console.log(query);
   return (jsYaml.safeDump(ret));
 }
 
