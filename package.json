@@ -38,6 +38,6 @@
     "space": true
   },
   "devDependencies": {
-    "xo": "^0.29.1"
+    "xo": "^0.30.0"
   }
 }
